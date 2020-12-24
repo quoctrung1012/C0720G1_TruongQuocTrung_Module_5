@@ -1,0 +1,4 @@
+ng new tên project
+y (chọn yes)
+chọn
+SCSS
