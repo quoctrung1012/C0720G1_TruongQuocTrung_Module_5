@@ -1,4 +1,36 @@
+--Tạo một project
 ng new tên project
 y (chọn yes)
 chọn
 SCSS
+--Trong project chọn file app, tạo một file hay dự án.
+chọn open in terminal.
+ng generate component tên dự án
+
+ng g c tên dự án
+xử lý trong file html và tạo class trong file tên dự án.compoment.ts
+
+--Chạy thì dùng lệnh
+ng s --o
+
+-- add boostrap
+vào file package.json tìm và thêm vào thư viện 
+"dependencies": {
+  "bootstrap": "^4.3.1",
+  "jquery": "^3.4.1",
+  "popper.js": "^1.15.0"
+}
+
+-- vào file angular.json tìm 
+"styles": [
+              "src/styles.scss"
+            ],
+thêm dòng 
+"node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+"scripts": []
+thêm dòng: 
+"node_modules/jquery/dist/jquery.min.js",
+"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+
+Nếu chạy chương trình trên terminal. thì crlt + c để tắt servcer
