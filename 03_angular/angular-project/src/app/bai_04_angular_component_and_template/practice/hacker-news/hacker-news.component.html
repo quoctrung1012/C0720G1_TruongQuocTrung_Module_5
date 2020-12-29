@@ -1,0 +1,21 @@
+<h2>Today's article</h2>
+<hr>
+<div class="container-fluid">
+  <table>
+      <tr *ngFor="let art of articles">
+        <th>{{art.title}}</th>
+        <th><a href="{{art.url}}" target="_blank">{{art.title}}</a></th>
+        <th><app-likes></app-likes></th>
+      </tr>
+  </table>
+</div>
+
+<hr>
+<div style="text-align: center">
+  <textarea [(ngModel)]="title" cols="70"></textarea>
+  <textarea [(ngModel)]="url" cols="70"></textarea><br>
+  <button (click)="addArticle()">Add</button>
+  <br>
+  @CodeGym, 2019
+</div>
+
