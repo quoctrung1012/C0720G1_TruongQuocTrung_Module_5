@@ -9,5 +9,8 @@
 <a routerLink="/calculator">calculator</a>||
 <a routerLink="/color-picker">color-picker</a>||
 <a routerLink="/hacker-new-v01">Hack news v01</a>||
+<a routerLink="/name-card">Name Card</a>||
+<a routerLink="/progress-bar">Progress Bar</a>
 <router-outlet></router-outlet>
-
+<app-name-card *ngIf="isCardNameRoute()" cardName="Professional Dev" email="prodev@abc.xyz" phone="0123456789"></app-name-card>
+<app-progress-bar *ngIf="isProgressBar()" width="65"></app-progress-bar>

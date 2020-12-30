@@ -1,16 +1,43 @@
 <h2>Today's article</h2>
 <hr>
 <div class="container-fluid">
-  <table>
-      <tr *ngFor="let art of articles">
+  <table >
+      <tr  *ngFor="let art of articles">
         <th>{{art.title}}</th>
         <th><a href="{{art.url}}" target="_blank">{{art.title}}</a></th>
         <th><app-likes></app-likes></th>
       </tr>
   </table>
 </div>
-
 <hr>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+  Add New Article
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addModalLabel">New Article</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <textarea class="form-control" [(ngModel)]="title" ></textarea><br>
+          <textarea class="form-control" [(ngModel)]="url" ></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="addArticle()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
 <div style="text-align: center">
   <textarea [(ngModel)]="title" cols="70"></textarea>
   <textarea [(ngModel)]="url" cols="70"></textarea><br>

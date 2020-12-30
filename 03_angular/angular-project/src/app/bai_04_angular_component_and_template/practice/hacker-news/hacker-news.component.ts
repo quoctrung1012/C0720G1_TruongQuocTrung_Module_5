@@ -39,6 +39,8 @@ export class HackerNewsComponent implements OnInit {
 
   addArticle() {
     this.articles.push({title: this.title, url: this.url});
+    this.url = '';
+    this.title = '';
   }
 
 }

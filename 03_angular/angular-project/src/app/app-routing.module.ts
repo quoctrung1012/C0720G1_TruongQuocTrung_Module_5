@@ -6,6 +6,8 @@ import {HackerNewsComponent} from './bai_04_angular_component_and_template/pract
 import {LikesComponent} from './bai_04_angular_component_and_template/practice/hacker-news/likes/likes.component';
 import {CalculatorComponent} from './bai_03_anguler_overview/exercise/calculator/calculator.component';
 import {ColorPickerComponent} from './bai_03_anguler_overview/exercise/color-picker/color-picker.component';
+import {NameCardComponent} from './bai_05_components_interaction/practice/name-card/name-card.component';
+import {ProgressBarComponent} from './bai_05_components_interaction/practice/progress-bar/progress-bar.component';
 
 
 const routes: Routes = [
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: 'calculator', component: CalculatorComponent},
   {path: 'color-picker', component: ColorPickerComponent},
   {path: 'hacker-new-v01', component: HackerNewsComponent},
-  {path: 'likes', component: LikesComponent}
+  {path: 'likes', component: LikesComponent},
+  {path: 'name-card', component: NameCardComponent},
+  {path: 'progress-bar', component: ProgressBarComponent}
 
 ];
 

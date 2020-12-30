@@ -11,6 +11,16 @@ import {CalculatorComponent} from './bai_03_anguler_overview/exercise/calculator
 import { ColorPickerComponent } from './bai_03_anguler_overview/exercise/color-picker/color-picker.component';
 import { HackerNewsComponent } from './bai_04_angular_component_and_template/practice/hacker-news/hacker-news.component';
 import { LikesComponent } from './bai_04_angular_component_and_template/practice/hacker-news/likes/likes.component';
+import { HackerNewV2Component } from './bai_04_angular_component_and_template/exercise/hacker-new-v2/hacker-new-v2.component';
+import { NameCardComponent } from './bai_05_components_interaction/practice/name-card/name-card.component';
+import { ProgressBarComponent } from './bai_05_components_interaction/practice/progress-bar/progress-bar.component';
+import { CountdownTimerComponent } from './bai_05_components_interaction/exercise/app-vote/countdown-timer/countdown-timer.component';
+import { CountdownTimerAliasComponent } from './bai_05_components_interaction/exercise/app-vote/countdown-timer-alias/countdown-timer-alias.component';
+import { CountdownTimerEventAliasComponent } from './bai_05_components_interaction/exercise/app-vote/countdown-timer-event-alias/countdown-timer-event-alias.component';
+import { CountdownTimerEventComponent } from './bai_05_components_interaction/exercise/app-vote/countdown-timer-event/countdown-timer-event.component';
+import { CountdownTimerGetSetComponent } from './bai_05_components_interaction/exercise/app-vote/countdown-timer-get-set/countdown-timer-get-set.component';
+import { CountdownTimerOnchangesComponent } from './bai_05_components_interaction/exercise/app-vote/countdown-timer-onchanges/countdown-timer-onchanges.component';
+import { RatingBarComponent } from './bai_05_components_interaction/exercise/app-vote/rating-bar/rating-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +31,17 @@ import { LikesComponent } from './bai_04_angular_component_and_template/practice
     CalculatorComponent,
     ColorPickerComponent,
     HackerNewsComponent,
-    LikesComponent
+    LikesComponent,
+    HackerNewV2Component,
+    NameCardComponent,
+    ProgressBarComponent,
+    CountdownTimerComponent,
+    CountdownTimerAliasComponent,
+    CountdownTimerEventAliasComponent,
+    CountdownTimerEventComponent,
+    CountdownTimerGetSetComponent,
+    CountdownTimerOnchangesComponent,
+    RatingBarComponent,
   ],
   imports: [
     BrowserModule,
