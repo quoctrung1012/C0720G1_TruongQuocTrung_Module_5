@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FrontSizeComponent } from './bai_03_anguler_overview/practice/front-size/front-size.component';
 import { PetComponent } from './bai_03_anguler_overview/practice/pet/pet.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddBoostrapsComponent } from './bai_03_anguler_overview/practice/add-boostraps/add-boostraps.component';
 import {CalculatorComponent} from './bai_03_anguler_overview/exercise/calculator/calculator.component';
 import { ColorPickerComponent } from './bai_03_anguler_overview/exercise/color-picker/color-picker.component';
@@ -21,6 +21,9 @@ import { CountdownTimerEventComponent } from './bai_05_components_interaction/ex
 import { CountdownTimerGetSetComponent } from './bai_05_components_interaction/exercise/app-vote/countdown-timer-get-set/countdown-timer-get-set.component';
 import { CountdownTimerOnchangesComponent } from './bai_05_components_interaction/exercise/app-vote/countdown-timer-onchanges/countdown-timer-onchanges.component';
 import { RatingBarComponent } from './bai_05_components_interaction/exercise/app-vote/rating-bar/rating-bar.component';
+import { TodoComponent } from './bai_06_anglar_forms/practice/todo/todo.component';
+import { LoginComponent } from './bai_06_anglar_forms/exercise/login/login.component';
+import { RegisterFinalComponent } from './bai_06_anglar_forms/exercise/register-final/register-final.component';
 
 @NgModule({
   declarations: [
@@ -42,11 +45,15 @@ import { RatingBarComponent } from './bai_05_components_interaction/exercise/app
     CountdownTimerGetSetComponent,
     CountdownTimerOnchangesComponent,
     RatingBarComponent,
+    TodoComponent,
+    LoginComponent,
+    RegisterFinalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
