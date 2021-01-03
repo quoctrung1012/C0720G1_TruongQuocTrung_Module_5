@@ -1,7 +1,8 @@
-export interface IPerson {
-  id: number;
-  name: string;
+export class IPerson {
+  idPerson: number;
+  namePerson: string;
   idCard: string;
   email: string;
-  address: string;
+  phone: string;
+  addressPerson: string;
 }

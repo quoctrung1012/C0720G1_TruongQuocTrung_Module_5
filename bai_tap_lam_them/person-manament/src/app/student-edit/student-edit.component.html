@@ -1,0 +1,92 @@
+<h3 style="text-align: center">Create Student</h3>
+<div class="container">
+  <form [formGroup] = "editStudentForm" (ngSubmit)="edit(editStudentForm)" novalidate >
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Id Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="id" placeholder="Id Student" readonly>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Name Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="name"  placeholder="Name Student">
+      </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="editStudentForm.get('name').invalid && editStudentForm.get('name').touched">
+      <span *ngIf="editStudentForm.get('name').hasError('required')">Name is required</span>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Phone Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="phone" placeholder="Phone Student">
+      </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="editStudentForm.get('phone').invalid && editStudentForm.get('phone').touched">
+      <span *ngIf="editStudentForm.get('phone').hasError('required')">Phone is required</span>
+      <span *ngIf="editStudentForm.get('phone').hasError('pattern')">Phone must start with 090 or 091 followed by 7 digits.</span>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Address Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="address" placeholder="Address Student">
+      </div>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="editStudentForm.get('address').invalid && editStudentForm.get('address').touched">
+      <span *ngIf="editStudentForm.get('address').hasError('required')">Address is required</span>
+    </div>
+
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Birthday Student</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" formControlName="birthday" placeholder="Birthday Student">
+      </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="editStudentForm.get('birthday').invalid && editStudentForm.get('birthday').touched">
+      <span *ngIf="editStudentForm.get('birthday').hasError('required')">Birthday is required</span>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Scores Student</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="scores" placeholder="Scores Student">
+      </div>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="editStudentForm.get('scores').invalid && editStudentForm.get('scores').touched">
+      <span *ngIf="editStudentForm.get('scores').hasError('required')">scores is required</span>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Link Avatar Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="avatar" placeholder="Link Avatar Student">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Link Avatar Size Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="avatarSize" placeholder="Link Avatar Size Student">
+      </div>
+    </div>
+    <div class="form-group row" style="text-align: center">
+      <div class="col">
+        <button class="btn btn-outline-secondary"  type="reset">Reset</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-success" type="submit" [disabled]="!editStudentForm.valid">Submit</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-secondary" routerLink="/list-student">Cancel</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+

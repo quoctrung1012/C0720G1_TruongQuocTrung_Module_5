@@ -1,8 +1,7 @@
-import {ICustomerType} from './ICustomerType';
 import {IPerson} from '../person/IPerson';
+import {CustomerType} from './CustomerType';
 
-export interface ICustomer extends IPerson{
+export class ICustomer extends IPerson{
   birthday: string;
-  customerType: ICustomerType;
-
+  customerType: CustomerType;
 }

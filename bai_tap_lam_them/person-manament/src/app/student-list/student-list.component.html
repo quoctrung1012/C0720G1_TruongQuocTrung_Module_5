@@ -1,45 +1,41 @@
+<h3 style="text-align: center">List Student</h3>
+<div><a class="btn btn-outline-secondary" routerLink="/create-student">Create Student</a></div>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-9">
-      <div style="text-align: center">
-        <table class="table table-hover table-bordered">
-          <thead>
-          <tr class="table-active">
-            <th>Id Student</th>
-            <th>Name Student</th>
-            <th>Phone Student</th>
-            <th>Birthday Student</th>
-            <th>Address Student</th>
-            <th>Scores Student</th>
-            <th>Result Student</th>
-            <th>Action</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let students of studentList">
-            <th>{{students.id}}</th>
-            <th>{{students.name}}</th>
-            <th>{{students.phone}}</th>
-            <th>{{students.birthday}}</th>
-            <th>{{students.address}}</th>
-            <th>{{students.scores}}</th>
-            <th>
-              <p *ngIf="students.scores > 5; else failedCase" style="color: green">Pass</p>
-              <ng-template #failedCase>
-                <p style="color: red">Failed</p>
-              </ng-template>
-            </th>
-            <th><button class="btn btn-outline-secondary" (click)="getStudentDetail(students)">Detail</button></th>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="col-lg-3">
-      <div *ngIf="studentDetail">
-        <app-student-manament [student]="studentDetail"></app-student-manament>
-      </div>
-    </div>
+  <div style="text-align: center">
+    <table class="table table-hover table-bordered">
+      <thead>
+      <tr class="table-active">
+        <th>Id Student</th>
+        <th>Name Student</th>
+        <th>Phone Student</th>
+        <th>Birthday Student</th>
+        <th>Address Student</th>
+        <th>Scores Student</th>
+        <th>Result Student</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let students of studentList">
+        <th>{{students.id}}</th>
+        <th>{{students.name}}</th>
+        <th>{{students.phone}}</th>
+        <th>{{students.birthday | date: 'dd/MM/yyyy'}}</th>
+        <th>{{students.address}}</th>
+        <th>{{students.scores}}</th>
+        <th>
+          <p *ngIf="students.scores > 5; else failedCase" style="color: green">Pass</p>
+          <ng-template #failedCase>
+            <p style="color: red">Failed</p>
+          </ng-template>
+        </th>
+        <th>
+          <button class="btn btn-outline-secondary" [routerLink]="['detail-student', students.id]">Detail</button>
+          <button class="btn btn-outline-warning" [routerLink]="['edit-student',students.id]">Edit</button>
+        </th>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 

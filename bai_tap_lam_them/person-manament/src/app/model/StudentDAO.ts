@@ -1,7 +1,7 @@
 import {IStudent} from './IStudent';
 
 export class StudentDAO {
-  public studentDAO: IStudent[] = [
+  public static studentDAO: IStudent[] = [
     {
       id: 1,
       name: 'Nguyễn Văn A',

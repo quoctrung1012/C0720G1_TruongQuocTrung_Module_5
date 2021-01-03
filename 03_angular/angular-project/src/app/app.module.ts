@@ -24,7 +24,39 @@ import { RatingBarComponent } from './bai_05_components_interaction/exercise/app
 import { TodoComponent } from './bai_06_anglar_forms/practice/todo/todo.component';
 import { LoginComponent } from './bai_06_anglar_forms/exercise/login/login.component';
 import { RegisterFinalComponent } from './bai_06_anglar_forms/exercise/register-final/register-final.component';
+import { TimeLiveComponent } from './bai_07_service_and_router/practice/time-live/time-live.component';
+import { YoutubePlaylistComponent } from './bai_07_service_and_router/practice/youtube/youtube-playlist/youtube-playlist.component';
+import { YoutubePlayerComponent } from './bai_07_service_and_router/practice/youtube/youtube-player/youtube-player.component';
+import { HomeComponent } from './bai_07_service_and_router/exercise/dictionary/home/home.component';
+import { DictionaryComponent } from './bai_07_service_and_router/exercise/dictionary/dictionary/dictionary.component';
+import { DictionaryPageComponent } from './bai_07_service_and_router/exercise/dictionary/dictionary-page/dictionary-page.component';
+import { DictionaryDetailComponent } from './bai_07_service_and_router/exercise/dictionary/dictionary-detail/dictionary-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { CasesComponent } from './exam/cases/cases.component';
+import { CasesDetailsComponent } from './exam/cases-details/cases-details.component';
+import { EditCasesComponent } from './exam/edit-cases/edit-cases.component';
+import { CasesStatComponent } from './exam/cases-stat/cases-stat.component';
+import { AddCasesComponent } from './exam/add-cases/add-cases.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatSelectModule} from '@angular/material/select';
+
+// import {ChartsModule} from 'ng2-charts';
+
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,12 +80,41 @@ import { RegisterFinalComponent } from './bai_06_anglar_forms/exercise/register-
     TodoComponent,
     LoginComponent,
     RegisterFinalComponent,
+    TimeLiveComponent,
+    YoutubePlaylistComponent,
+    YoutubePlayerComponent,
+    HomeComponent,
+    DictionaryComponent,
+    DictionaryPageComponent,
+    DictionaryDetailComponent,
+    CasesComponent,
+    CasesDetailsComponent,
+    AddCasesComponent,
+    EditCasesComponent,
+    CasesStatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+
+    MatInputModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatButtonToggleModule,
+    MatSelectModule,
+    // ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

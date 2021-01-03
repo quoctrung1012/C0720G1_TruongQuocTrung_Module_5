@@ -1,0 +1,97 @@
+<div class="container">
+  <h1>Create Customer</h1>
+  <p>
+    <a href="#" routerLink="/customer/list" class="btn btn-outline-primary">Back List Customer</a>
+  </p>
+<!--  <form [formGroup]="formAddGroup" (ngSubmit)="submitForm()" novalidate>-->
+  <form [formGroup]="formAddGroup" (ngSubmit)="submit(formAddGroup)">
+    <div class="form-group">
+      <label for="nameCustomer">Customer Name</label>
+      <input formControlName="namePerson" id="nameCustomer" type="text" class="form-control">
+      <div *ngIf="errorCus.namePerson.touched && errorCus.namePerson.invalid" class="alert alert-danger">
+        <div *ngIf="errorCus.namePerson.errors.required">Name is required!</div>
+      </div>
+
+      <!--    <div class="alert alert-danger" role="alert"-->
+      <!--         *ngIf="formAddGroup.get('namePerson').invalid && formAddGroup.get('namePerson').touched">-->
+      <!--      <span *ngIf="formAddGroup.get('namePerson').hasError('required')">Name is required!</span>-->
+      <!--    </div>-->
+    </div>
+
+    <div class="form-group">
+      <label for="idCardCustomer"> Customer Id Card</label>
+      <input formControlName="idCard" id="idCardCustomer" type="text" class="form-control">
+      <div *ngIf="errorCus.idCard.touched && errorCus.idCard.invalid" class="alert alert-danger">
+        <div *ngIf="errorCus.idCard.errors.required">Id card is required!</div>
+      </div>
+
+      <!--    <div class="alert alert-danger" role="alert"-->
+      <!--         *ngIf="formAddGroup.get('idCard').invalid && formAddGroup.get('idCard').touched">-->
+      <!--      <span *ngIf="formAddGroup.get('idCard').hasError('required')">Id card is required!</span>-->
+      <!--    </div>-->
+    </div>
+
+    <div class="form-group">
+      <label for="emailCustomer">Customer Email</label>
+      <input formControlName="email" id="emailCustomer" type="text" class="form-control">
+      <div *ngIf="errorCus.email.touched && errorCus.email.invalid" class="alert alert-danger">
+        <div *ngIf="errorCus.email.errors.required">Email is required!</div>
+      </div>
+
+      <!--    <div class="alert alert-danger" role="alert"-->
+      <!--         *ngIf="formAddGroup.get('email').invalid && formAddGroup.get('email').touched">-->
+      <!--      <span *ngIf="formAddGroup.get('email').hasError('required')">Email is required!</span>-->
+      <!--    </div>-->
+    </div>
+
+    <div class="form-group">
+      <label for="phoneCustomer">Customer Phone</label>
+      <input formControlName="phone" id="phoneCustomer" type="text" class="form-control">
+      <div *ngIf="errorCus.phone.touched && errorCus.phone.invalid" class="alert alert-danger">
+        <div *ngIf="errorCus.phone.errors.required">Phone is required!</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="addressCustomer">Customer Address</label>
+      <input formControlName="addressPerson" id="addressCustomer" type="text" class="form-control">
+      <div *ngIf="errorCus.addressPerson.touched && errorCus.addressPerson.invalid" class="alert alert-danger">
+        <div *ngIf="errorCus.addressPerson.errors.required">Address is required!</div>
+      </div>
+
+      <!--    <div class="alert alert-danger" role="alert"-->
+      <!--         *ngIf="formAddGroup.get('addressPerson').invalid && formAddGroup.get('addressPerson').touched">-->
+      <!--      <span *ngIf="formAddGroup.get('addressPerson').hasError('required')">Address is required!</span>-->
+      <!--    </div>-->
+    </div>
+
+    <div class="form-group">
+      <label for="birthdayCustomer">Customer Birthday</label>
+      <input formControlName="birthday" id="birthdayCustomer" type="date" class="form-control">
+      <div *ngIf="errorCus.birthday.touched && errorCus.birthday.invalid" class="alert alert-danger">
+        <div *ngIf="errorCus.birthday.errors.required">Address is required!</div>
+      </div>
+
+      <!--    <div class="alert alert-danger" role="alert"-->
+      <!--         *ngIf="formAddGroup.get('birthday').invalid && formAddGroup.get('birthday').touched">-->
+      <!--      <span *ngIf="formAddGroup.get('birthday').hasError('required')">Birthday is required!</span>-->
+      <!--    </div>-->
+    </div>
+
+    <!--  <div class="form-group">-->
+    <!--    <label for="customerType">Customer Type</label>-->
+    <!--    <select formControlName="idCustomerType" id="customerType" class="form-control">-->
+    <!--      <option value="">Choose</option>-->
+    <!--      <option value="1">Diamond</option>-->
+    <!--      <option value="2">Platinum</option>-->
+    <!--      <option value="3">Gold</option>-->
+    <!--      <option value="4">Silver</option>-->
+    <!--      <option value="5">Member</option>-->
+    <!--    </select>-->
+    <!--  </div>-->
+<!--    <button class="btn btn-outline-success" type="submit" [disabled]="formAddGroup.valid">Submit</button>-->
+    <button class="btn btn-outline-success" type="submit">Submit</button>
+  </form>
+</div>
+
+

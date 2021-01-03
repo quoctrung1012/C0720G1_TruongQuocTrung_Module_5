@@ -1,0 +1,43 @@
+<div class="example-container mat-elevation-z8">
+    <h2>Corona Cases Details</h2>
+    <div class="example-loading-shade" *ngif="isLoading">
+        <mat-spinner *ngid="isLoading"></mat-spinner>
+    </div>
+    <div class="button-row">
+        <a mat-flat-button color="primary" [routerLink]="['/cases']">
+        <mat-icon>list</mat-icon>
+        </a>
+    </div>
+    <mat-card class="example-card">
+        <mat-card-header>
+<mat-card-title>
+    <h2>{{cases.name}}</h2>
+</mat-card-title>
+<mat-card-subtitle>
+    {{cases.age}} years old
+</mat-card-subtitle>
+        </mat-card-header>    
+    </mat-card>
+    <mat-card-content>
+        <dl>
+            <dt>Gender</dt>
+            <dd>{{cases.gender}}</dd>
+            <dt>Address</dt>
+            <dd>{{cases.address}}</dd>
+            <dt>City</dt>
+            <dd>{{cases.city}}</dd>
+            <dt>Country</dt>
+            <dd>{{cases.country}}</dd>
+            <dt>Status</dt>
+            <dd>{{cases.status}}</dd>
+        </dl>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-flat-button color="primary" [routerLink] = "['/edit-cases', cases._id]">
+        <mat-icon>edit</mat-icon>
+        </a>
+        <a mat-flat-button color="warn" (click)="deleteCases(cases._id)">
+            <mat-icon>delete</mat-icon>
+            </a>
+    </mat-card-actions>
+</div>

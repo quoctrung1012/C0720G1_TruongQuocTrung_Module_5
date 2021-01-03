@@ -1,0 +1,33 @@
+<div class="container" id="list">
+  <h1>List Customer</h1>
+  <p style="text-align:right">
+    <button type="button" routerLink="/customer/create" class="btn btn-outline-secondary">Create Customer</button>
+  </p>
+  <table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>Id Customer</th>
+      <th>Name Customer</th>
+      <th>Customer Type</th>
+      <th colspan="3">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{customer.idPerson}}</td>
+      <td>{{customer.namePerson}}</td>
+      <td>{{customer.customerType.nameCustomerType}}</td>
+      <td>
+        <button type="button" [routerLink]="['/customer/update/', customer.idPerson]" class="btn-outline-success btn">Update</button>
+        <a href="#" [routerLink]="['/customers/', customer.idPerson, 'view']" class="btn btn-info">View</a>
+
+        <!--        <button type="button" [routerLink]="['/customer', 'detail', customer.idPerson]" class="btn-outline-secondary btn">Detail</button>-->
+<!--        <button type="button" (click)="apiCustomerService.delete(customer.idPerson)" class="btn btn-outline-danger">Remove</button>-->
+<!--        <a href="#" [routerLink]="['/customer', customer.idPerson, 'customer-edit']" class="btn-outline-success btn">Update</a>-->
+<!--        <a type="button" (click)="deleteCustomer(customer.idPerson)" class="btn btn-outline-danger">Delete</a>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

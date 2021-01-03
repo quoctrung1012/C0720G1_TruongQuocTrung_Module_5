@@ -1,6 +1,96 @@
 <h3 style="text-align: center">Create Student</h3>
 <div class="container">
-  <form>
+  <form [formGroup] = "createStudentForm" (ngSubmit)="createStudent(createStudentForm)" novalidate >
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Id Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="id" placeholder="Id Student">
+      </div>
+    </div>
 
+    <div class="alert alert-danger" role="alert" *ngIf="createStudentForm.get('id').invalid && createStudentForm.get('id').touched">
+      <span *ngIf="createStudentForm.get('id').hasError('required')">Id is required</span>
+      <span *ngIf="createStudentForm.get('id').hasError('pattern')">Id not String.</span>
+    </div>
+
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Name Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="name"  placeholder="Name Student">
+      </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="createStudentForm.get('name').invalid && createStudentForm.get('name').touched">
+      <span *ngIf="createStudentForm.get('name').hasError('required')">Name is required</span>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Phone Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="phone" placeholder="Phone Student">
+      </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="createStudentForm.get('phone').invalid && createStudentForm.get('phone').touched">
+      <span *ngIf="createStudentForm.get('phone').hasError('required')">Phone is required</span>
+      <span *ngIf="createStudentForm.get('phone').hasError('pattern')">Phone must start with 090 or 091 followed by 7 digits.</span>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Address Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="address" placeholder="Address Student">
+      </div>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="createStudentForm.get('address').invalid && createStudentForm.get('address').touched">
+      <span *ngIf="createStudentForm.get('address').hasError('required')">Address is required</span>
+    </div>
+
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Birthday Student</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" formControlName="birthday" placeholder="Birthday Student">
+      </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="createStudentForm.get('birthday').invalid && createStudentForm.get('birthday').touched">
+      <span *ngIf="createStudentForm.get('birthday').hasError('required')">Birthday is required</span>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Scores Student</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="scores" placeholder="Scores Student">
+      </div>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="createStudentForm.get('scores').invalid && createStudentForm.get('scores').touched">
+      <span *ngIf="createStudentForm.get('scores').hasError('required')">scores is required</span>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Link Avatar Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="avatar" placeholder="Link Avatar Student">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Link Avatar Size Student</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="avatarSize" placeholder="Link Avatar Size Student">
+      </div>
+    </div>
+    <div class="form-group row" style="text-align: center">
+      <div class="col">
+        <button class="btn btn-outline-secondary"  type="reset">Reset</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-success" type="submit" [disabled]="!createStudentForm.valid">Submit</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-secondary" routerLink="/list-student">Cancel</button>
+      </div>
+
+    </div>
   </form>
 </div>

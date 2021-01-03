@@ -1,0 +1,37 @@
+
+<div style="text-align: center">
+  <h2>Student Detail</h2>
+  <div class="form-group">
+    <label>Id Student</label>
+    <input class="form-control" value ='{{student.id}}' readonly>
+  </div>
+  <div class="form-group">
+    <label>Name Student</label>
+    <input class="form-control" value ='{{student.name}}' readonly>
+  </div>
+  <div class="form-group">
+    <label>Phone Student</label>
+    <input class="form-control" value ='{{student.phone}}' readonly>
+  </div>
+  <div class="form-group">
+    <label>Address Student</label>
+    <input class="form-control" value ='{{student.address}}' readonly>
+  </div>
+  <div class="form-group">
+    <label>Scores Student</label>
+    <input class="form-control" value ='{{student.scores}}' readonly>
+  </div>
+  <div class="form-group">
+    <img [src]="[student.avatar]" style="max-width: 200px" [style.width.px]="student.avatarSize">
+  </div>
+  <div>
+    <label>Input scores</label>
+    <input type="number" class="form-control col-lg-6" placeholder="Input scores" (change)="updateScores($event.target.value)">
+  </div>
+  <div>
+    <label>Input Avatar</label>
+    <input class="form-control col-lg-6" placeholder="Input url avatar" (change)="updateAvatar($event.target.value)">
+    <input class="form-control col-lg-6" min="50" max="200" type="range" (change)="updateSize($event.target.value)" [value]="student.avatarSize">
+  </div>
+</div>
+
